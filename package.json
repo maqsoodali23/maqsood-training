@@ -6,8 +6,18 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write .",
     "precommit": "lint-staged",
-    "format": "prettier --write \"src/**/*.js\""
+    "prettier-format": "prettier --config .prettierrc --write",
+    "lint": "eslint --ext .ts"
+  },
+  "husky": {
+    "hooks": {
+      
+    }
+  },
+  "lint-staged": {
+    "*": "prettier --write"
   },
   "repository": {
     "type": "git",
@@ -21,16 +31,12 @@
   "homepage": "https://github.com/maqsoodali23/maqsood-training#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "node-env-run": "^4.0.2"
+    "husky": "^4.3.7",
+    "lint-staged": "^10.5.3",
+    "node-env-run": "^4.0.2",
+    "prettier": "^2.2.1"
   },
   "devDependencies": {
     "prettier-eslint": "^12.0.0"
-  },
-  "lint-staged": {
-    "src/**/*.js": [
-      "eslint src --ext .js",
-      "prettier --write",
-      "git add"
-    ]
   }
 }
