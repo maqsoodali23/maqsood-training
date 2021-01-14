@@ -1,12 +1,12 @@
-require("dotenv").config();
-const os = require("os");
-const fs = require("fs");
+import { cpus, homedir, platform, arch, release as _release } from "os";
+import { writeFile } from "fs";
 
-let cpuinfo = os.cpus();
-let homedirectory = os.homedir();
-let osPlatform = os.platform();
-let architecture = os.arch();
-let release = os.release();
+let cpuinfo = cpus();
+let homedirectory = homedir();
+let osPlatform = platform();
+let architecture = arch();
+let release = _release();
+const fileName = process.env.FILE_NAME || 'macInformation.txt';
 
 let allInfo = {
   osPlatform,
@@ -16,8 +16,8 @@ let allInfo = {
   cpuinfo,
 };
 
-fs.writeFile(
-  homedirectory + "/Desktop/" + process.env.FILE_NAME,
+writeFile(
+  homedirectory + "/Desktop/" + fileName,
   JSON.stringify(allInfo),
   (error) => {
     if (error) throw error;
