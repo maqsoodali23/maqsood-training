@@ -11,14 +11,6 @@
     "prettier-format": "prettier --config .prettierrc --write",
     "lint": "eslint --ext .ts"
   },
-  "husky": {
-    "hooks": {
-      
-    }
-  },
-  "lint-staged": {
-    "*": "prettier --write"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/maqsoodali23/maqsood-training.git"
@@ -38,5 +30,13 @@
   },
   "devDependencies": {
     "prettier-eslint": "^12.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*": "prettier --write"
   }
 }
