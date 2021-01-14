@@ -1,7 +1,7 @@
 const http = require("http");
 const port = process.env.SERVER_PORT || 3000;
 
-const server = http.createServer(function (req, res) {
+const server = http.createServer( (req, res) => {
   let url = req.url;
   if (url === "/welcome") {
     res.write("Welcome to my page");
