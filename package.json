@@ -4,7 +4,9 @@
   "description": "This repository contains the code developed under training sessions",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precommit": "lint-staged",
+    "format": "prettier --write \"src/**/*.js\""
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,12 @@
   },
   "devDependencies": {
     "prettier-eslint": "^12.0.0"
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "eslint src --ext .js",
+      "prettier --write",
+      "git add"
+    ]
   }
 }
