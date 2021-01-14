@@ -18,5 +18,8 @@
   "homepage": "https://github.com/maqsoodali23/maqsood-training#readme",
   "dependencies": {
     "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "prettier-eslint": "^12.0.0"
   }
 }
