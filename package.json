@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This repository contains the code developed under training sessions",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "precommit": "lint-staged",

@@ -1,1 +1,1 @@
-require("./httpFile");
+import "./httpFile.js";
