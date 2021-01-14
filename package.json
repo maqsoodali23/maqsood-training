@@ -1,0 +1,22 @@
+{
+  "name": "maqsood-training",
+  "version": "1.0.0",
+  "description": "This repository contains the code developed under training sessions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maqsoodali23/maqsood-training.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maqsoodali23/maqsood-training/issues"
+  },
+  "homepage": "https://github.com/maqsoodali23/maqsood-training#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
