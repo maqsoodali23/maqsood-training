@@ -20,6 +20,3 @@ fs.writeFile((homedirectory + '/Desktop/' + process.env.FILE_NAME), JSON.stringi
     if(error) throw error;
     console.log('File created successfully!');
 });
-
-// console.log(homedirectory);
-// console.log(JSON.stringify(allInfo));
